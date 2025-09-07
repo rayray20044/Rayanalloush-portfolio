@@ -47,10 +47,11 @@
         <div class="hero-buttons">
             <a href="#projects" class="btn btn-primary">View My Work</a>
             <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+            <a href="assets/Rayan-Alloush-CV.pdf" class="btn btn-download" download>📄 Download CV</a>
         </div>
     </div>
     <div class="hero-image">
-        <img src="https://via.placeholder.com/280x280/2563eb/ffffff?text=RA" alt="Rayan Alloush" class="profile-image" loading="lazy">
+        <div class="avatar-container" id="avatar"></div>
     </div>
 </header>
 
@@ -64,7 +65,7 @@
         <div class="about-content">
             <div class="about-text fade-in">
                 <p>
-                    I'm a UI/UX designer and aspiring frontend developer based in Amman, Jordan.
+                    I'm a UI/UX designer and aspiring frontend developer based in Berlin, Germany.
                     I enjoy creating interactive, user-focused designs that feel intuitive and enjoyable to use.
                     For me, design isn’t just about appearance—it’s about crafting experiences that truly work.
                 </p>
@@ -92,10 +93,7 @@
                     <div class="stat-number">5+</div>
                     <div class="stat-label">Technologies</div>
                 </div>
-                <div class="stat-card">
-                    <div class="stat-number">2+</div>
-                    <div class="stat-label">Years Experience</div>
-                </div>
+
             </div>
         </div>
     </section>
@@ -333,6 +331,12 @@
             }
         };
     });
+
+    fetch("assets/avatar-rayan.svg")
+        .then(res => res.text())
+        .then(svg => {
+            document.getElementById("avatar").innerHTML = svg;
+        });
 
 </script>
 </body>
